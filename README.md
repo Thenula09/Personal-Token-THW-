@@ -5,15 +5,14 @@ A professional blockchain-based token management system for Thenula Hansaja Comp
 ## 🚀 Features
 
 ### Frontend (Next.js)
-- **Beautiful Welcome Page** - Professional company branding with animated backgrounds
+- ** Welcome Page** - Professional company branding with animated backgrounds
 - **Token Dashboard** - Real-time balance display and management
 - **Transfer Functionality** - Send THW tokens to any wallet address
 - **Transaction History** - Complete record of all transactions
 - **MetaMask Integration** - Seamless wallet connectivity
 - **Responsive Design** - Works on all devices
-- **English Interface** - Professional user experience
-
-### Backend (Hardhat)
+##
+# Backend (Hardhat)
 - **THW Token Smart Contract** - ERC20 compliant token
 - **Local Blockchain** - Hardhat network for testing
 - **Test Accounts** - 20 pre-funded accounts with 10,000 ETH each
