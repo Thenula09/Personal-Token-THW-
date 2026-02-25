@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Test</title>
+</head>
+<body>
+    <h1>MetaMask Network Test</h1>
+    <button onclick="checkNetwork()">Check Network</button>
+    <button onclick="addNetwork()">Add Hardhat Network</button>
+    <div id="result"></div>
+
+    <script>
+        async function checkNetwork() {
+            if (typeof window.ethereum !== 'undefined') {
+                const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+                document.getElementById('result').innerHTML = `
+                    <h3>Current Network:</h3>
+                    <p>Chain ID: ${chainId}</p>
+                    <p>Expected: 0x7a69 (for Hardhat)</p>
+                    <p>Correct Network: ${chainId === '0x7a69' ? '✅ YES' : '❌ NO'}</p>
+                `;
+            } else {
+                document.getElementById('result').innerHTML = '<p style="color: red;">MetaMask not installed!</p>';
+            }
+        }
+
+        async function addNetwork() {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    await window.ethereum.request({
+                        method: 'wallet_addEthereumChain',
+                        params: [{
+                            chainId: '0x7a69',
+                            chainName: 'Hardhat Local',
+                            rpcUrls: ['http://127.0.0.1:8545'],
+                            nativeCurrency: {
+                                name: 'ETH',
+                                symbol: 'ETH',
+                                decimals: 18
+                            }
+                        }]
+                    });
+                    alert('Hardhat network added successfully!');
+                } catch (error) {
+                    alert('Error adding network: ' + error.message);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
