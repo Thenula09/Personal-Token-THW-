@@ -1,4 +1,4 @@
-# THW Token Dashboard
+# THW (Thenula Hansaja Wanniarachchi) Token Dashboard
 <img width="1536" height="1024" alt="ChatGPT Image Feb 25, 2026 at 07_14_47 PM" src="https://github.com/user-attachments/assets/15f5ee24-0a39-4c3a-9f86-68f58e5a000e" />
 A professional blockchain-based token management system for Thenula Hansaja Company Private Limited. Built with Next.js, React, and Ethereum smart contracts.
 
